@@ -24,7 +24,7 @@ void loop() {
   float temperature = (voltage - .5) * 100;
   Serial.println(temperature);
   //tune on leds incrementaly 20C and every 2C after
-  if(temperature < baselinetemp){
+  if(temperature < baselinetemp+2){
     digitalWrite(2, LOW);
     digitalWrite(3, LOW);
     digitalWrite(4, LOW);
