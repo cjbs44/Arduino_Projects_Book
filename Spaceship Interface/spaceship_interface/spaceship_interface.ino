@@ -23,9 +23,13 @@ void loop() {
     digitalWrite(4, LOW); //red LED
     digitalWrite(5, HIGH); //red LED
     delay(250); //wait for a quarter of a second
-    //toggle the LEDs
-    digitalWrite(4, HIGH); //red LED
-    digitalWrite(5, LOW); //red LED
-    delay(250); //wait for a further quarter of a second
+    //toggle the LEDs only if switch still closed
+    switchstate = digitalRead(2);
+    //re-read switch state
+    if (switchstate == HIGH) { //only toggle red led's if switch still closed
+      digitalWrite(4, HIGH); //red LED
+      digitalWrite(5, LOW); //red LED
+      delay(250); //wait for a further quarter of a second
+    }
   }
 } //go back to the beginning of the loop
