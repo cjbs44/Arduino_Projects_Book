@@ -9,16 +9,16 @@ void loop() {
   // put your main code here, to run repeatedly:
   int keyval = analogRead(A0);
   Serial.println(keyval);
-  if(keyval == 1023){
+  if(keyval >= 1020){
     tone(8, notes[0]);
   }
   else if(keyval >= 990 && keyval <= 1010){
     tone(8, notes[1]);
   }
-  else if(keyval >= 505 && keyval <=515){
+  else if(keyval >= 505 && keyval <=520){
     tone(8, notes[2]);
   }
-  else if(keyval >= 5 && keyval <= 15){
+  else if(keyval >= 3 && keyval <= 20){
     tone(8, notes[3]);
   }
   else{
