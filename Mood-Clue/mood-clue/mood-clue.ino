@@ -15,9 +15,9 @@ void loop() {
   potval = analogRead(potpin);
   Serial.print("potval: ");
   Serial.print(potval);
-  angle = map(potval, 0, 1023, 0, 179);
+  angle = map(potval, 0, 1023, 0, 120); //full deflection for my stepper motor = 165
   Serial.print(", angle: ");
   Serial.println(angle);
   myservo.write(angle);
-  delay(15);
+  delay(100);
 }
