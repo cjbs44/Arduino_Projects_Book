@@ -3,7 +3,7 @@ unsigned long previoustime = 0;
 int switchstate = 0;
 int prevswitchstate = 0;
 int led = 2;
-long interval = 600000;
+long interval = 60000;
 
 void setup() {
   // put your setup code here, to run once:
